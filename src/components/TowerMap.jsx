@@ -17,7 +17,15 @@ const createTowerIcon = (status) => {
   });
 };
 
-const TowerMap = ({ towers }) => {
+const TowerMap = ({ towers = [] }) => {
+  if (!Array.isArray(towers) || towers.length === 0) {
+    return (
+      <div className="w-full h-full flex items-center justify-center text-gray-400">
+        No tower data available
+      </div>
+    );
+  }
+
   return (
     <MapContainer 
       center={[6.9271, 79.8612]} // Center on Colombo
