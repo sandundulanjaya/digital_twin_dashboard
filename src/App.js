@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 // Import the components
 import Dashboard from './pages/Dashboard'; // Your existing Home page
 import MapPage from './pages/MapPage';
+import HealthPage from './pages/HealthPage';
 import AlertsPage from './pages/AlertsPage';
 import SettingsPage from './pages/SettingsPage';
 import Navbar from './components/navbar';
@@ -13,6 +14,7 @@ const App = () => {
     switch(activeTab) {
       case 'dashboard': return <Dashboard />;
       case 'map': return <MapPage />;
+      case 'health': return <HealthPage />;
       case 'alerts': return <AlertsPage />;
       case 'settings': return <SettingsPage />;
       default: return <Dashboard />;
